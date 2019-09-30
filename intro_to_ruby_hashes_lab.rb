@@ -1,29 +1,35 @@
 def new_hash
-  # return an empty hash
+  #creates and returns a new, empty hash
+  {}
 end
 
 def my_hash
-  # return a valid hash with any key/value pair of your choice
+  #returns a valid hash. This hash should have at least one key/value pair of your choice.
+  { "Programming" => "is great!" }
 end
 
 def pioneer
-  # return a hash with a key of :name and a corresponding value of 'Grace Hopper'
+  #returns a hash. This hash should have a key that is a symbol :name and whose value is a string, 'Grace Hopper'
+  {name: 'Grace Hopper'}
 end
 
 def id_generator
-  # return a hash with a key :id assigned to positive integer
+  #creates and returns a hash with one key/value pair. The key should be a symbol, :id. For the value, provide a positive integer of your choice.
+  {id: 4}
 end
 
 def my_hash_creator(key, value)
-  # return a hash that includes the key and value parameters passed into this method
+  #takes in two parameters
+  {key => value}
 end
 
 def read_from_hash(hash, key)
-  # return the correct value using the hash and key parameters
+  #takes in two parameters. The first parameter is a hash, the second is a key. Used together, they will either produce a value on that hash corresponding to the key, or nil by default.
+  hash[key]
 end
 
 def update_counting_hash(hash, key)
-  # given a hash an a key as parameters, return an updated hash
-  # if the provided key is not present in the hash, add it and assign it to the value of 1
-  # if the provided key is present, increment its value by 1
+  #takes in two parameters. The first parameter is a hash, and the second is a key. The hash provided will have any number of keys, but all values will be integers. 
+  hash[key] ? hash[key] += 1 : hash[key] = 1
+  hash
 end
